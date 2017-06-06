@@ -1,0 +1,4 @@
+E:\Program\python27\python.exe E:/Program/python27/Lib/site-packages/scrapy/cmdline.py crawl YodobashiSpider
+E:\Program\python27\python.exe E:/Program/python27/Lib/site-packages/scrapy/cmdline.py crawl YamadaSpider
+E:\Program\python27\python.exe E:/Program/python27/Lib/site-packages/scrapy/cmdline.py crawl AmazonSpider
+E:\Program\python27\python.exe E:/Program/python27/Lib/site-packages/scrapy/cmdline.py crawl RakutenSpider

@@ -1,0 +1,2 @@
+select site,min(price) from price where product_name like '%EHP-CH1010AGD%' group by site;
+select site,min(price) from price where product_name like '%ZSB-IBUB02BK%' group by site;

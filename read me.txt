@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------------------------
+■環境インストール
+1,install python2.7
+ https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi
+
+2,create table[price] in Mysql DB
+ The sql is in the file[table create sql.txt]
+
+ *site:1:ヨドバシカメラ;2:ヤマダ;3:Amazon;4:楽天;
+
+3,unzip the file[source.zip]
+ *set db connect
+  open the file[demo\demo\settings.py]
+  下記の情報を修正すればよい
+  MYSQL_HOST = 'localhost'
+  MYSQL_PORT = 3307
+  MYSQL_DBNAME = 'demo'
+  MYSQL_USER = 'root'
+  MYSQL_PASSWD = ''
+
+4,run commond
+  [win+R]->input [cmd]
+  cd to 3's path
+  run commond in file[run commond.txt](replace [E:/Program/python27] to 3's path)
+
+5,search sql as file[search sql.txt]
+
+------------------------------------------------------------------------------------------------
+■説明
+１、型番「EHP-CH1010AGD」と「ZSB-IBUB02BK」のデータだけ取得された
+	型番追加したい場合、「demo\demo\spiders\*_spider.py」にて、「start_urls」にURLを追加すればよい
+２、DBへ挿入した機能だけ有効になる。
+　　jsonファイルに出力機能もある。該当機能有効にしたい場合、「demo\demo\settings.py」ファイルに69行のコメントを外す
+　　「#'demo.pipelines.JsonWithEncodingYodobashiPipeline': 300,」
+　　ー＞
+　　「'demo.pipelines.JsonWithEncodingYodobashiPipeline': 300,」
+
+　　出力ファイル名が「data.json」である、フォルダ「demo\demo」直下に出力されるはず
+
+
